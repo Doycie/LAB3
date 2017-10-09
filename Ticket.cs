@@ -13,7 +13,7 @@ namespace Lab3
     }
     class TicketClass {
         
-        bool firstClass { get; set; }
+        public bool firstClass { get; set; }
     }
     class TicketDate {
         private DateTime date { get; set; }
