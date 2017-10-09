@@ -26,7 +26,7 @@ namespace Lab3
 		private void handlePayment(UIInfo info)
 		{
 			// *************************************
-			// This is the code you need to refactor
+			// This is the code you need to refactor testtest
 			// *************************************
 
 			// Get number of tariefeenheden
