@@ -18,6 +18,8 @@ namespace Lab3
 		ComboBox payment;
 		Button pay;
 
+        Ticket ticket;
+
 		public UI ()
 		{
 			initializeControls ();
@@ -25,37 +27,46 @@ namespace Lab3
 
 		private void handlePayment(UIInfo info)
 		{
-			// *************************************
-			// This is the code you need to refactor testtest
-			// *************************************
+            // *************************************
+            // This is the code you need to refactor testtest
+            // *************************************
 
-			// Get number of tariefeenheden
-			int tariefeenheden = Tariefeenheden.getTariefeenheden (info.From, info.To);
 
-			// Compute the column in the table based on choices
-			int tableColumn;
-			// First based on class
-			switch (info.Class) {
-			case UIClass.FirstClass:
-				tableColumn = 3;
-				break;
-			default:
-				tableColumn = 0;
-				break;
+            ticket = new Ticket();
+            ticket.trajectory.Destination = info.To;
+            ticket.trajectory.Origin = info.From;
+            if (info.Way == UIWay.Return)
+            {
+                ticket.ticketType.isReturn = true;
+                ticket.ticketType.isSingle = false;
+            }else
+            {
+                ticket.ticketType.isReturn = false;
+                ticket.ticketType.isSingle = true;
+            }
+            // Compute the column in the table based on choices
+
+            // First based on class
+
+            if (info.Class == UIClass.FirstClass) { 
+                    ticket.ticketClass.firstClass = true;
+			
 			}
-			// Then, on the discount
+            // Then, on the discount
+
+            int disc = 0;
 			switch (info.Discount) {
 			case UIDiscount.TwentyDiscount:
-				tableColumn += 1;
+				disc = 1;
 				break;
 			case UIDiscount.FortyDiscount:
-				tableColumn += 2;
+				disc = 2;
 				break;
 			}
 
 			// Get price
-			float price = PricingTable.getPrice (tariefeenheden, tableColumn);
-			if (info.Way == UIWay.Return) {
+			float price = DBase.getPrice (ticket, disc);
+			if (ticket.ticketType.isReturn) {
 				price *= 2;
 			}
 			// Add 50 cent if paying with credit card
