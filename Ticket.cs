@@ -29,6 +29,10 @@ namespace Lab3
         public bool isDayCard { get; set; }
         public bool isBikeCard { get; set; }
     }
+    public class TicketDiscount
+    {
+        public int discount { get; set; }
+    }
 
 
 
@@ -40,6 +44,7 @@ namespace Lab3
         public TicketClass ticketClass;
         public TicketDate ticketDate;
         public TicketType ticketType;
+        public TicketDiscount ticketDiscount;
 
         public Ticket()
         {
@@ -47,6 +52,7 @@ namespace Lab3
             ticketClass = new TicketClass();
             ticketDate = new TicketDate();
             ticketType = new TicketType();
+            ticketDiscount = new TicketDiscount();
         }
     }
 }

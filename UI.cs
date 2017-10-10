@@ -54,18 +54,18 @@ namespace Lab3
 			}
             // Then, on the discount
 
-            int disc = 0;
+            
 			switch (info.Discount) {
 			case UIDiscount.TwentyDiscount:
-				disc = 1;
+				ticket.ticketDiscount.discount = 1;
 				break;
 			case UIDiscount.FortyDiscount:
-				disc = 2;
+                ticket.ticketDiscount.discount = 2;
 				break;
 			}
 
 			// Get price
-			float price = DBase.getPrice (ticket, disc);
+			float price = DBase.getPrice (ticket);
 			if (ticket.ticketType.isReturn) {
 				price *= 2;
 			}

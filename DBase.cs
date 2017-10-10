@@ -11,7 +11,7 @@ namespace Lab3
         }
 
         //This method takes a ticket and calculates the price based on its properties
-        public static float getPrice(Ticket ticket, int disc)
+        public static float getPrice(Ticket ticket)
         {
             int tariefeenheden = Tariefeenheden.getTariefeenheden(ticket.trajectory.Origin, ticket.trajectory.Destination);
 
@@ -27,7 +27,7 @@ namespace Lab3
                 tableColumn = 0;
             }
             // Then, on the discount
-            switch (disc)
+            switch (ticket.ticketDiscount.discount)
             {
                 case 1:
                     tableColumn += 1;
