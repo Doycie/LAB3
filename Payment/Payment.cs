@@ -17,7 +17,7 @@ namespace Lab3
             Success = false;
         }
 
-        protected abstract void Pay();
+        public abstract void Pay();
 
 
         public bool isSuccessfull()

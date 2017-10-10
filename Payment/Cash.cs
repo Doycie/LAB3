@@ -34,7 +34,7 @@ namespace Lab3
             coinMachine = new IKEAMyntAtare2000();
         }
 
-        protected override void Pay()
+        public override void Pay()
         {
             coinMachine.starta();
             coinMachine.betala((int)Math.Round(Price * 100));
