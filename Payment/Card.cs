@@ -55,7 +55,7 @@ namespace Lab3
             MessageBox.Show("Cancel transaction 1");
         }
 
-        protected override void Pay()
+        public override void Pay()
         {
             Connect();
             int dcid = BeginTransaction(Price);
