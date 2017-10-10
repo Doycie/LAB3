@@ -40,7 +40,7 @@ namespace Lab3
                 ticket.ticketType.isReturn = true;
                 ticket.ticketType.isSingle = false;
             }else
-            {
+            { 
                 ticket.ticketType.isReturn = false;
                 ticket.ticketType.isSingle = true;
             }
