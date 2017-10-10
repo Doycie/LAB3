@@ -2,16 +2,16 @@
 
 namespace Lab3
 {
-    internal class DBase
+    static class DBase
     {
         //This method is not needed because of the way the example is setup
-        public float GetDiscount()
+        public static float GetDiscount()
         {
             return 0;
         }
 
         //This method takes a ticket and calculates the price based on its properties
-        public double getPrice(Ticket ticket, int disc)
+        public static float getPrice(Ticket ticket, int disc)
         {
             int tariefeenheden = Tariefeenheden.getTariefeenheden(ticket.trajectory.Origin, ticket.trajectory.Destination);
 
@@ -42,20 +42,20 @@ namespace Lab3
         }
 
         //This method is not needed because of the way the example is setup
-        public Trajectory getTrajectory(String[] stations)
+        public static Trajectory getTrajectory(String[] stations)
         {
             Trajectory t = new Trajectory();
             return null;
         }
 
         //This method is not needed because of the way the example is setup
-        public String[] getStations()
+        public static String[] getStations()
         {
             return null;
         }
 
         //This method is not needed because of the way the example is setup
-        public String verifiedMachine()
+        public static String verifiedMachine()
         {
             return null;
         }

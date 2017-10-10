@@ -24,10 +24,10 @@ namespace Lab3
     }
     class TicketType
     {
-        bool isSingle { get; set; }
-        bool isReturn { get; set; }
-        bool isDayCard { get; set; }
-        bool isBikeCard { get; set; }
+        public bool isSingle { get; set; }
+        public bool isReturn { get; set; }
+        public bool isDayCard { get; set; }
+        public bool isBikeCard { get; set; }
     }
 
 
