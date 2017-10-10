@@ -5,24 +5,24 @@ using System.Text;
 
 namespace Lab3
 {
-    class Trajectory {
+    public class Trajectory {
 
         public String Destination { get; set; }
         public String Origin { get; set; }
         public int trajectoryValue { get; set; }
     }
-    class TicketClass {
+    public class TicketClass {
         
         public bool firstClass { get; set; }
     }
-    class TicketDate {
+    public class TicketDate {
         private DateTime date { get; set; }
         public String dateToString()
         {
             return date.ToString();
         }
     }
-    class TicketType
+    public  class TicketType
     {
         public bool isSingle { get; set; }
         public bool isReturn { get; set; }
@@ -34,12 +34,19 @@ namespace Lab3
 
 
 
-    class Ticket
+    public class Ticket
     {
         public Trajectory trajectory;
         public TicketClass ticketClass;
         public TicketDate ticketDate;
         public TicketType ticketType;
 
+        public Ticket()
+        {
+            trajectory = new Trajectory();
+            ticketClass = new TicketClass();
+            ticketDate = new TicketDate();
+            ticketType = new TicketType();
+        }
     }
 }

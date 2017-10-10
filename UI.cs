@@ -89,7 +89,7 @@ namespace Lab3
                     break;
             }
             payment.Pay();
-        }
+        
 		}
 
 #region Set-up -- don't look at it
