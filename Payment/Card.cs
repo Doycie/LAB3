@@ -3,15 +3,6 @@ using System.Windows.Forms;
 
 namespace Lab3
 {
-    public interface ICard
-    {
-        void Connect();
-        void Disconnect();
-        int BeginTransaction(float amount);
-        bool EndTransaction(int id);
-        void CancelTransaction(int id);
-    }
-
     abstract class Card : Payment, ICard
     {
         protected string cardtype;

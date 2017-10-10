@@ -39,6 +39,8 @@
   <ItemGroup>
     <Compile Include="Payment\Cash.cs" />
     <Compile Include="DBase.cs" />
+    <Compile Include="Payment\Interfaces\IKEAMyntAtare2000.cs" />
+    <Compile Include="Payment\Interfaces\ICard.cs" />
     <Compile Include="Payment\Payment.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
