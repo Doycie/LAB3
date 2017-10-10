@@ -69,11 +69,6 @@ namespace Lab3
 			if (ticket.ticketType.isReturn) {
 				price *= 2;
 			}
-			// Add 50 cent if paying with credit card
-			if (info.Payment == UIPayment.CreditCard) {
-				price += 0.50f;
-			}
-
             // Pay
             Payment payment;
             switch (info.Payment)
