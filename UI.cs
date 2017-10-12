@@ -25,13 +25,8 @@ namespace Lab3
             initializeControls();
         }
 
-        private void handlePayment(UIInfo info)
+        private void CreateTicket(UIInfo info)
         {
-            // *************************************
-            // This is the code you need to refactor testtest
-            // *************************************
-
-
             ticket = new Ticket();
 
             ticket.trajectory.Destination = info.To;
@@ -63,9 +58,11 @@ namespace Lab3
                 case UIDiscount.FortyDiscount:
                     ticket.discount = Discount.Forty;
                     break;
-                
             }
+        }
 
+        private void Pay(UIInfo info)
+        {
             // Get price
             float price = DBase.getPrice(ticket);
             if (ticket.isReturn)
@@ -87,7 +84,11 @@ namespace Lab3
                     break;
             }
             payment.Pay();
-
+        }
+        private void handlePayment(UIInfo info)
+        {
+            CreateTicket(info);
+            Pay(info);
         }
 
         #region Set-up -- don't look at it

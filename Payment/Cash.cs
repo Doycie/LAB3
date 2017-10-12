@@ -21,7 +21,6 @@ namespace Lab3
             coinMachine.starta();
             coinMachine.betala((int)Math.Round(Price * 100));
             coinMachine.stoppa();
-            Success = true;
         }
     }
 }
