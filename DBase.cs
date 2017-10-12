@@ -18,7 +18,7 @@ namespace Lab3
             // Compute the column in the table based on choices
             int tableColumn;
             // First based on class
-            if (ticket.ticketClass.firstClass)
+            if (ticket.ticketClass == Ticket.TicketClass.First)
             {
                 tableColumn = 3;
             }
@@ -27,16 +27,12 @@ namespace Lab3
                 tableColumn = 0;
             }
             // Then, on the discount
-            switch (ticket.ticketDiscount.discount)
-            {
-                case 1:
+            if(ticket.discount == Ticket.Discount.Twenty)
                     tableColumn += 1;
-                    break;
-
-                case 2:
+            else if(ticket.discount == Ticket.Discount.Forty)
                     tableColumn += 2;
-                    break;
-            }
+                    
+            
 
             return PricingTable.getPrice(tariefeenheden, tableColumn);
         }
