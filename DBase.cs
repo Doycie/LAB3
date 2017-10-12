@@ -4,12 +4,6 @@ namespace Lab3
 {
     static class DBase
     {
-        //This method is not needed because of the way the example is setup
-        public static float GetDiscount()
-        {
-            return 0;
-        }
-
         //This method takes a ticket and calculates the price based on its properties
         public static float getPrice(Ticket ticket)
         {
@@ -18,7 +12,7 @@ namespace Lab3
             // Compute the column in the table based on choices
             int tableColumn;
             // First based on class
-            if (ticket.ticketClass == Ticket.TicketClass.First)
+            if (ticket.ticketClass == TicketClass.First)
             {
                 tableColumn = 3;
             }
@@ -27,33 +21,12 @@ namespace Lab3
                 tableColumn = 0;
             }
             // Then, on the discount
-            if(ticket.discount == Ticket.Discount.Twenty)
+            if(ticket.discount == Discount.Twenty)
                     tableColumn += 1;
-            else if(ticket.discount == Ticket.Discount.Forty)
+            else if(ticket.discount == Discount.Forty)
                     tableColumn += 2;
                     
-            
-
             return PricingTable.getPrice(tariefeenheden, tableColumn);
-        }
-
-        //This method is not needed because of the way the example is setup
-        public static Trajectory getTrajectory(String[] stations)
-        {
-            Trajectory t = new Trajectory();
-            return null;
-        }
-
-        //This method is not needed because of the way the example is setup
-        public static String[] getStations()
-        {
-            return null;
-        }
-
-        //This method is not needed because of the way the example is setup
-        public static String verifiedMachine()
-        {
-            return null;
         }
     }
 }

@@ -46,22 +46,22 @@ namespace Lab3
             // First based on class
 
             if (info.Class == UIClass.FirstClass)
-                ticket.ticketClass = Ticket.TicketClass.First;
+                ticket.ticketClass = TicketClass.First;
             else
-                ticket.ticketClass = Ticket.TicketClass.Second;
+                ticket.ticketClass = TicketClass.Second;
             // Then, on the discount
 
 
             switch (info.Discount)
             {
                 case UIDiscount.NoDiscount:
-                    ticket.discount = Ticket.Discount.Zero;
+                    ticket.discount = Discount.Zero;
                     break;
                 case UIDiscount.TwentyDiscount:
-                    ticket.discount = Ticket.Discount.Twenty;
+                    ticket.discount = Discount.Twenty;
                     break;
                 case UIDiscount.FortyDiscount:
-                    ticket.discount = Ticket.Discount.Forty;
+                    ticket.discount = Discount.Forty;
                     break;
                 
             }
