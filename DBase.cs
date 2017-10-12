@@ -4,7 +4,7 @@ namespace Lab3
 {
     static class DBase
     {
-        //This method is not needed because of the way the example is setup
+        //From Original design. This method is not needed because of the way the example is setup
         public static float GetDiscount()
         {
             return 0;
@@ -41,20 +41,20 @@ namespace Lab3
             return PricingTable.getPrice(tariefeenheden, tableColumn);
         }
 
-        //This method is not needed because of the way the example is setup
+        //From Original design. This method is not needed because of the way the example is setup
         public static Trajectory getTrajectory(String[] stations)
         {
             Trajectory t = new Trajectory();
             return null;
         }
 
-        //This method is not needed because of the way the example is setup
+        //From Original design. This method is not needed because of the way the example is setup
         public static String[] getStations()
         {
             return null;
         }
 
-        //This method is not needed because of the way the example is setup
+        //From Original design. This method is not needed because of the way the example is setup
         public static String verifiedMachine()
         {
             return null;
