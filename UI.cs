@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace Lab3
 {
-	public class UI : Form
+	public class TicketMachine : Form
 	{
 		ComboBox fromBox;
 		ComboBox toBox;
@@ -20,7 +20,7 @@ namespace Lab3
 
         Ticket ticket;
 
-		public UI ()
+		public TicketMachine()
 		{
 			initializeControls ();
 		}
